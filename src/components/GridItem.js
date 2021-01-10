@@ -9,12 +9,12 @@ export default function GridItem({
   imageUrl,
   title,
   subtitle,
-  viewAction,
-  editAction,
+  onClick
 }) {
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card
+        onClick={onClick}
         style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
       >
         <CardMedia

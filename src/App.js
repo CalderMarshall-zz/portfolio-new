@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
+import Dialog from '@material-ui/core/Dialog';
 import red from '@material-ui/core/colors/red';
 import teal from '@material-ui/core/colors/teal';
 import ImagesGrid from './components/ImagesGrid';
@@ -30,6 +31,10 @@ const theme = createMuiTheme({
 });
 
 function App() {
+  const [open, setOpen] = useState(false);
+  const [bigUrl, setBigUrl] = useState('');
+  const [alt, setAlt] = useState('');
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -43,17 +48,27 @@ function App() {
           <div className="box">
             <div className="column">
               <AboutContainer />
-              <InformationContainer/>
+              <InformationContainer />
             </div>
             <div className="column">
-              <ImagesGrid />
-              <SkillsContainer/>
+              <ImagesGrid setAlt={setAlt} open={open} setOpen={setOpen} bigUrl={bigUrl} setBigUrl={setBigUrl} />
+              <SkillsContainer />
             </div>
           </div>
           <div className="foot">
             <Footer />
           </div>
-        </div>
+            <Dialog
+              open={open}
+              onClose={() => setOpen(false)}
+              aria-labelledby="simple-modal-title"
+              aria-describedby="simple-modal-description"
+            >
+                <img width="100%" alt="calder" src={bigUrl}>
+                </img>
+                {alt}
+            </Dialog>
+          </div>
       </ThemeProvider>
     </>
   );
