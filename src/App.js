@@ -59,14 +59,12 @@ function App() {
             <Footer />
           </div>
             <Dialog
+              maxWidth="md"
               open={open}
               onClose={() => setOpen(false)}
-              aria-labelledby="simple-modal-title"
-              aria-describedby="simple-modal-description"
             >
-                <img width="100%" alt="calder" src={bigUrl}>
+                <img width={"100%"} alt={alt} src={bigUrl}>
                 </img>
-                {alt}
             </Dialog>
           </div>
       </ThemeProvider>
