@@ -22,20 +22,19 @@ export default function AboutContainer() {
           About Me
         </Typography>
         <Typography paragraph variant="subtitle1">
-          Hey, I'm Calder, a Javascript developer at{" "}
+          Hey, I'm Calder, a Web Engineer at{" "}
           <Link target="none" href="https://www.wahoofitness.com/">
             Wahoo Fitness
           </Link>{" "}
           in Atlanta.
         </Typography>
         <Typography paragraph>
-          While most of my career has been spent writing front end Javascript
-          and React, my full stack role at Wahoo is allowing my Node.js
-          knowledge to steadily progress. I have also worked with Java backend
-          stacks. I advocate for, and prefer the use of modern Javascript
-          features, and the Ecmascript syntax. Most recently at Wahoo, I've
-          begun to become familiar with Ruby on Rails, Bitbucket CI/CD, AWS
-          Cloud, and SonarQube.
+          Most of my career has been spent writing front end Javascript
+          and React.  At Wahoo, I am currently in a majority ruby on rails full stack role.    
+          I advocate for, and prefer the use of modern Javascript
+          features, and the Ecmascript syntax. Working in our MVC rails app at Wahoo has certainly strengthened my skills in object oriented programming.
+          Most recently at Wahoo, I've been working with some cool tools including Bitbucket CI/CD, AWS
+          Lambda, PubSub, and SonarQube.
         </Typography>
         <Typography paragraph>
           I support and believe in unit testing. I've held roles where
